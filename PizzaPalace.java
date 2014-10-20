@@ -8,19 +8,29 @@
  * 
  * For guidance, refer to the flowchart PizzaPalace.pdf distributed with this file
  * 
- * @author <change to your name>
- * @version <today's date>
+ * @author <Manu Gualandri>
+ * @version <20/10/2014>
  */
+import java.util.Scanner;
+
 public class PizzaPalace {
 
 	public static void main(String[] args) {
-		// TODO Replace this section with your own code
-		
-		// NOTE
-		// The Math class provides a function, ceiling(), which will take a double
-		// and return the next higher integer value.
-		// For example, Math.ceiling(4.125) would evaluate to 5
-
+	Scanner scnr = new Scanner(System.in);
+   int numPeople = 0;
+   int numSlicesPerPerson = 0;
+   int numSlicesPerPizza = 0;
+   double numPizzas = 0.0;
+   System.out.println("How many people are in the club?");
+   numPeople = scnr.nextInt();
+   System.out.println("How many slices of pizza is each person allowed?");
+   numSlicesPerPerson = scnr.nextInt();
+   System.out.println("How many slices are there in each pizza?");
+   numSlicesPerPizza = scnr.nextInt();
+   numPizzas = (numPeople * numSlicesPerPerson)/numSlicesPerPizza;
+   System.out.println("The number of pizzas required is " + Math.ceil(numPizzas) + ".");
+   
+   return;
 	}
 
 }
